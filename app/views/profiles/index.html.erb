@@ -1,1 +1,4 @@
-
+<%= form_for(:profile, url: profiles_show_path) do |f|%>
+<%= f.text_field :name %>
+<%= f.submit "Search" %>
+<% end %>
