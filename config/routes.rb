@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :profiles
   get "profiles_show" => "profiles#show"
+  post "profiles_search" => "profiles#search"
   root "profiles#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
