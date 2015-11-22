@@ -1,4 +1,5 @@
 
-<% @items.each do |i| %>
-<%="login: " + i["login"] %> </br>
+<% @items.each do |item| %>
+<%="login: " + item["login"] %> </br>
+<%= image_tag item["avatar_url"] %>
 <% end %>
