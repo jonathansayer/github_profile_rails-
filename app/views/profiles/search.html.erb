@@ -1,1 +1,4 @@
-<%= @response%>
+
+<% @items.each do |i| %>
+<%="login: " + i["login"] %> </br>
+<% end %>

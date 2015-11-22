@@ -5,7 +5,8 @@ class ProfilesController < ApplicationController
 
   def search
     q = params[:profile][:name]
-    @response = HTTParty.get('https://api.github.com/search/users?q=' + q )
+    response = HTTParty.get('https://api.github.com/search/users?q=' + q )
+    @items = response["items"]
   end
 
 end
