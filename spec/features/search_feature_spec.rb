@@ -6,5 +6,12 @@ feature 'profile search' do
       visit '/profiles'
       expect(page).to have_button "Search"
     end
+
+    scenario "should show profiles when searched for" do
+      visit '/profiles'
+      fill_in :Name, with: 'jonathansayer'
+      click_button 'Search'
+      expect(page).to have_content "login: jonathansayer"
+    end
   end
 end
